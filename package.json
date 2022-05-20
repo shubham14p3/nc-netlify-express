@@ -1,13 +1,8 @@
 {
-  "name": "netlify-express",
-  "version": "1.0.0",
-  "description": "",
+  "name": "nc-ntlf-ex-2022",
+  "version": "0.0.1",
+  "description": "Back End of Nise Comport",
   "main": "index.js",
-  "dependencies": {
-    "express": "^4.16.4",
-    "netlify-lambda": "^1.4.3",
-    "serverless-http": "^1.9.1"
-  },
   "devDependencies": {},
   "scripts": {
     "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
@@ -15,13 +10,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/owenconti/netlify-express.git"
+    "url": "git+https://github.com/shubham14p3/nc-ntlf-ex-2022.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/owenconti/netlify-express/issues"
+    "url": "https://github.com/owenconti/nc-ntlf-ex-2022/issues"
   },
-  "homepage": "https://github.com/owenconti/netlify-express#readme"
+  "homepage": "https://github.com/owenconti/nc-ntlf-ex-2022#readme",
+  
+  "dependencies": {
+    "netlify-lambda": "^1.4.3",
+    "serverless-http": "^1.9.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.0"
+  }
 }
