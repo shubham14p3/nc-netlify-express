@@ -22,10 +22,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
-  res.header('Access-Control-Allow-Origin', "*");
-  res.header('Access-Control-Allow-Methods', 'GET');
-  res.header("Access-Control-Allow-Headers", "accept, content-type");
-  res.header("Access-Control-Max-Age", "1728000");
   const { name, email, phone, work, password, cpassword } = req.body;
   // if (!name || !email || !phone || !work || !password || !cpassword) {
   if (!name || !email || !password || !cpassword) {
@@ -50,11 +46,6 @@ router.post("/register", async (req, res) => {
 });
 
 router.get("/profile", authenticate, (req, res) => {
-  res.header('Access-Control-Allow-Origin', "*");
-  res.header('Access-Control-Allow-Methods', 'GET');
-  res.header("Access-Control-Allow-Headers", "accept, content-type");
-  res.header("Access-Control-Max-Age", "1728000");
-  console.log(`Profile`);
   res.send(req.rootUser);
 });
 
@@ -72,10 +63,6 @@ router.post("/cont", (req, res) => {
 });
 
 router.post("/signin", async (req, res) => {
-  res.header('Access-Control-Allow-Origin', "*");
-  res.header('Access-Control-Allow-Methods', 'GET');
-  res.header("Access-Control-Allow-Headers", "accept, content-type");
-  res.header("Access-Control-Max-Age", "1728000");
   try {
     let token;
     const { email, password } = req.body;
