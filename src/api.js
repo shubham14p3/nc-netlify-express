@@ -9,6 +9,11 @@ const authenticate = require("./middleware/authenticate");
 
 const app = express();
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://www.nisecomport.com/'
+}));
 require("./db/conn");
 const User = require("./model/userSchema");
 router.use(cookieParser());
