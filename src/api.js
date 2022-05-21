@@ -4,13 +4,13 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const router = express.Router();
 const cookieParser = require("cookie-parser");
-const sendToken = require("../utils/jwtToken");
-const authenticate = require("../middleware/authenticate");
+const sendToken = require("./utils/jwtToken");
+const authenticate = require("./middleware/authenticate");
 
 const app = express();
 
-require("../db/conn");
-const User = require("../model/userSchema");
+require("./db/conn");
+const User = require("./model/userSchema");
 router.use(cookieParser());
 router.get("/", (req, res) => {
   res.send(`Hello world from the server rotuer js`);
